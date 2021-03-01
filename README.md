@@ -13,13 +13,11 @@ docker build -t lb-01 ./load_balancer
 
 ### Start first web server
 ```bash
-# docker run -itd --network MyNetwork -p 8001:80 --name web-01 web-01
 docker run -itd --network MyNetwork --name web-01 web-01
 ```
 
 ### Start second web server
 ```bash
-# docker run -itd --network MyNetwork -p 8002:80 --name web-02 web-02
 docker run -itd --network MyNetwork --name web-02 web-02
 ```
 
