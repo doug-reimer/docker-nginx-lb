@@ -30,7 +30,7 @@ docker run -itd --network MyNetwork -p 8000:80 --name lb-01 lb-01
 
 ## Use Docker Compose
 
-Using the `docker-compose.yml`, we can use docker-compose to orchestrate the containers:
+Instead of using the above steps, we can use docker-compose to orchestrate the containers via the `docker-compose.yml`:
 
 ```bash
 docker-compose up -d
