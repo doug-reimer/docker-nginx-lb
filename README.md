@@ -1,5 +1,9 @@
 
 ## Individual Containers
+
+The following steps show how to build and deploy the containers "manually".
+
+
 ### Build the containers
 ```bash
 docker build -t web-01 ./web-01
@@ -25,6 +29,9 @@ docker run -itd --network MyNetwork -p 8000:80 --name lb-01 lb-01
 ```
 
 ## Use Docker Compose
+
+Using the `docker-compose.yml`, we can use docker-compose to orchestrate the containers:
+
 ```bash
 docker-compose up -d
 ```
