@@ -1,0 +1,32 @@
+version: "3.8"
+
+services:
+  web01:
+    container_name: web-01
+    image: web-01:latest
+    build:
+      context: ./web-01
+    networks:
+      - MyNetwork
+  
+  web02:
+    container_name: web-02
+    image: web-02:latest
+    build:
+      context: ./web-02
+    networks:
+      - MyNetwork
+
+  load_balancer:
+    container_name: lb-01
+    image: lb-01:latest
+    build:
+      context: ./load_balancer
+    ports:
+      - "8000:80"
+    networks:
+      - MyNetwork
+
+networks:
+  MyNetwork:
+
